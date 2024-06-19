@@ -12,60 +12,60 @@ DEPMODBASEDIR ?= /
 
 PWD := $(shell pwd)
 
-WIREGUARD_VERSION :="1.0.0" 
+WIREGUARD_VERSION :="1.0.0"
 
-wireguard-y := main.o
-wireguard-y += noise.o
-wireguard-y += device.o
-wireguard-y += peer.o
-wireguard-y += timers.o
-wireguard-y += queueing.o
-wireguard-y += send.o
-wireguard-y += receive.o
-wireguard-y += socket.o
-wireguard-y += peerlookup.o
-wireguard-y += allowedips.o
-wireguard-y += ratelimiter.o
-wireguard-y += cookie.o
-wireguard-y += netlink.o
-wireguard-y += se-helper.o
-wireguard-y += se050/sss/ex_sss_boot.o
-wireguard-y += se050/sss/ex_sss_se05x.o
-wireguard-y += se050/sss/ex_sss_se05x_auth.o
-wireguard-y += se050/sss/ex_sss_scp03_auth.o
-wireguard-y += se050/sss/fsl_sss_apis.o
-wireguard-y += se050/sss/fsl_sss_se05x_mw.o
-wireguard-y += se050/sss/fsl_sss_se05x_scp03.o
-wireguard-y += se050/sss/fsl_sss_se05x_policy.o
-wireguard-y += se050/sss/fsl_sss_se05x_apis.o
-wireguard-y += se050/sss/fsl_sss_util_asn1_der.o
-wireguard-y += se050/sss/fsl_sss_user_impl.o
+wireguard_se-y := main.o
+wireguard_se-y += noise.o
+wireguard_se-y += device.o
+wireguard_se-y += peer.o
+wireguard_se-y += timers.o
+wireguard_se-y += queueing.o
+wireguard_se-y += send.o
+wireguard_se-y += receive.o
+wireguard_se-y += socket.o
+wireguard_se-y += peerlookup.o
+wireguard_se-y += allowedips.o
+wireguard_se-y += ratelimiter.o
+wireguard_se-y += cookie.o
+wireguard_se-y += netlink.o
+wireguard_se-y += se-helper.o
+wireguard_se-y += se050/sss/ex_sss_boot.o
+wireguard_se-y += se050/sss/ex_sss_se05x.o
+wireguard_se-y += se050/sss/ex_sss_se05x_auth.o
+wireguard_se-y += se050/sss/ex_sss_scp03_auth.o
+wireguard_se-y += se050/sss/fsl_sss_apis.o
+wireguard_se-y += se050/sss/fsl_sss_se05x_mw.o
+wireguard_se-y += se050/sss/fsl_sss_se05x_scp03.o
+wireguard_se-y += se050/sss/fsl_sss_se05x_policy.o
+wireguard_se-y += se050/sss/fsl_sss_se05x_apis.o
+wireguard_se-y += se050/sss/fsl_sss_util_asn1_der.o
+wireguard_se-y += se050/sss/fsl_sss_user_impl.o
 
-wireguard-y += se050/crypto/aes_cmac_multistep.o
-wireguard-y += se050/crypto/aes_cmac.o
-wireguard-y += se050/crypto/aes.o
+wireguard_se-y += se050/crypto/aes_cmac_multistep.o
+wireguard_se-y += se050/crypto/aes_cmac.o
+wireguard_se-y += se050/crypto/aes.o
 
-wireguard-y += se050/hostlib/i2c_a7.o
-wireguard-y += se050/hostlib/phNxpEse_Api.o
-wireguard-y += se050/hostlib/phNxpEsePal_i2c.o
-wireguard-y += se050/hostlib/phNxpEseProto7816_3.o
-wireguard-y += se050/hostlib/nxScp03_Com.o
-wireguard-y += se050/hostlib/smCom.o
-wireguard-y += se050/hostlib/smComT1oI2C.o
+wireguard_se-y += se050/hostlib/i2c_a7.o
+wireguard_se-y += se050/hostlib/phNxpEse_Api.o
+wireguard_se-y += se050/hostlib/phNxpEsePal_i2c.o
+wireguard_se-y += se050/hostlib/phNxpEseProto7816_3.o
+wireguard_se-y += se050/hostlib/nxScp03_Com.o
+wireguard_se-y += se050/hostlib/smCom.o
+wireguard_se-y += se050/hostlib/smComT1oI2C.o
 
-wireguard-y += se050/hostlib/global_platf.o
-wireguard-y += se050/hostlib/sm_apdu.o
-wireguard-y += se050/hostlib/sm_timer.o
-wireguard-y += se050/hostlib/sm_connect.o
+wireguard_se-y += se050/hostlib/global_platf.o
+wireguard_se-y += se050/hostlib/sm_apdu.o
+wireguard_se-y += se050/hostlib/sm_timer.o
+wireguard_se-y += se050/hostlib/sm_connect.o
 
-wireguard-y += se050/hostlib/se05x_ECC_curves.o
-wireguard-y += se050/hostlib/se05x_mw.o
-wireguard-y += se050/hostlib/se05x_tlv.o
-wireguard-y += se050/hostlib/se05x_APDU.o
+wireguard_se-y += se050/hostlib/se05x_ECC_curves.o
+wireguard_se-y += se050/hostlib/se05x_mw.o
+wireguard_se-y += se050/hostlib/se05x_tlv.o
+wireguard_se-y += se050/hostlib/se05x_APDU.o
 
-wireguard-y += se-helper.o
+wireguard_se-y += se-helper.o
 
-obj-m := wireguard.o
+obj-m := wireguard_se.o
 
 ccflags-y += -I$(src)/se050/inc
 ccflags-y += -I$(src)/se050/sss
