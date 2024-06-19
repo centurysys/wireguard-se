@@ -1,0 +1,10 @@
+*.o
+*.cmd
+GPATH
+GRTAGS
+GTAGS
+Module.symvers
+modules.order
+wireguard.ko
+wireguard.mod
+wireguard.mod.c
