@@ -39,7 +39,7 @@ static U8 session_Tlv[7];
 static U8 gEnableEnc = 0;
 #endif
 
-size_t strlen(const char* str) 
+size_t __strlen(const char* str)
 {
     size_t len = 0;
     while (str[len])
