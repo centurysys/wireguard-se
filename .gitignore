@@ -5,6 +5,6 @@ GRTAGS
 GTAGS
 Module.symvers
 modules.order
-wireguard_se.ko
-wireguard_se.mod
-wireguard_se.mod.c
+wireguard.ko
+wireguard.mod
+wireguard.mod.c
